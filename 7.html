@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generative Art</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <!--<script src="../p5.js"></script>-->
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+ <!-- <script src="sketch.js"></script>-->
+<!--	<script src="../jquery-1.8.0.min.js" type="text/javascript"></script>  -->
+
+</head>
+
+<body>
+
+<script type="text/javascript" charset="utf-8">
+
+//alert(9);
+var eyebool=false; 
+var y=1;
+
+let r, g, b;
+function setup() {
+  createCanvas(1000, 600);
+	
+  r = random(255);
+  g = random(255);
+  b = random(255);
+ }
+
+function changeeye()
+{
+ 
+   // for (var j = 0; j < 600; j += 1) 
+   // {
+			if(y%60<=10){
+				fill(199,237,204); 
+			}
+      else{
+				fill(1,0,255);
+			} 
+   	arc(170, 146, 20, 25, PI, 0);
+		fill(255);
+		ellipse(170,147,6,8);
+   // }
+}
+
+
+function draw1(){
+
+  //头发
+  push();
+  fill(0);
+  noStroke();
+  ellipse(200,125,162,170);
+  pop();
+   
+	fill(0);
+  beginShape();
+  vertex(281,132);
+  vertex(120,132);
+  vertex(120,190);
+  vertex(281,190);
+  endShape();
+
+  //脸
+	push();
+ 	fill(255,250,205);
+ 	noStroke();
+ 	ellipse(200, 150, 105, 130);
+ 	pop();
+
+ 	//刘海
+  fill(0);
+  arc(150,60,120,130,QUARTER_PI/4,PI/4);
+  arc(250,60,120,130,PI*2/4,PI);
+
+	//眉毛
+	stroke(0);
+  noFill();   
+  arc(170,130,30,10,PI,0);
+  arc(230,130,30,10,PI,0);
+
+	//眼睛
+	push();
+ 	fill(0);
+ 	ellipse(170, 146, 20, 25);
+	
+	
+	if(eyebool){
+		//alert(90);
+		fill(255);
+		arc(170, 146, 20, 25, PI, 0);
+	}else{
+		fill(199,237,204);
+		arc(170, 146, 20, 25, PI, 0);
+	}
+	
+	
+	fill(255);
+	ellipse(170,147,6,8);
+	
+	fill(0);
+ 	ellipse(230, 146, 20, 25);
+	fill(199,237,204);
+	arc(230, 146, 20, 25, PI, 0);
+	fill(255);
+	ellipse(230,147,6,8);
+	
+	
+ 	pop();
+
+ //鼻子
+  noFill();
+  line(205,160,195,167);
+  line(195,167,205,170);
+
+//嘴巴
+ noFill();
+  arc(200, 175, 30, 30, QUARTER_PI, PI -  QUARTER_PI);
+}
+
+				 
+				 
+				
+				
+function draw2(){
+
+  //头发
+  push();
+  fill(0);
+  noStroke();
+  ellipse(400,125,162,170);
+  pop();
+   
+	fill(0);
+  beginShape();
+	vertex(480,132);
+  vertex(320,132);
+  vertex(320,190);
+ // vertex(480,190);
+  endShape();
+
+  //脸
+	push();
+ 	fill(255,250,205);
+ 	noStroke();
+ 	ellipse(400, 150, 105, 130);
+ 	pop();
+
+ 	//刘海
+  fill(0);
+  arc(350,60,120,130,QUARTER_PI/4,PI/4);
+  arc(450,60,120,130,PI*2/4,PI);
+
+	//眉毛
+	stroke(0);
+  noFill();   
+  arc(370,130,30,10,PI,0);
+  arc(430,130,30,10,PI,0);
+
+	//眼睛
+	push();
+ 	fill(0);
+ 	ellipse(370, 146, 20, 25);
+	fill(199,237,204);
+	arc(370, 146, 20, 25, PI, 0);
+	fill(255);
+	ellipse(370,147,6,8);
+	
+	fill(0);
+ 	ellipse(430, 146, 20, 25);
+	fill(199,237,204);
+	arc(430, 146, 20, 25, PI, 0);
+	fill(255);
+	ellipse(430,147,6,8);
+	
+ 	pop();
+
+ //鼻子
+  noFill();
+  line(405,160,395,167);
+  line(395,167,405,170);
+
+//嘴巴
+ noFill();
+  arc(400, 175, 30, 30, QUARTER_PI, PI -  QUARTER_PI);
+}
+
+
+		
+function draw3(){
+
+  //头发
+  push();
+  fill(0);
+  noStroke();
+  ellipse(600,125,162,170);
+  pop();
+   
+	fill(0);
+  beginShape();
+	vertex(681,132);
+  vertex(520,132);
+  //vertex(520,190);
+  vertex(681,190);
+  endShape();
+
+  //脸
+	push();
+ 	fill(255,250,205);
+ 	noStroke();
+ 	ellipse(600, 150, 105, 130);
+ 	pop();
+
+ 	//刘海
+  fill(0);
+  arc(550,60,120,130,QUARTER_PI/4,PI/4);
+  arc(650,60,120,130,PI*2/4,PI);
+
+	//眉毛
+	stroke(0);
+  noFill();   
+  arc(570,130,30,10,PI,0);
+  arc(630,130,30,10,PI,0);
+
+	//眼睛
+	push();
+ //	fill(0);
+ //	ellipse(570, 146, 20, 25);
+ //	ellipse(630, 146, 20, 25);
+	
+	
+	fill(0);
+ 	ellipse(570, 146, 20, 25);
+	fill(199,237,204);
+	arc(570, 146, 20, 25, PI, 0);
+	fill(255);
+	ellipse(570,147,6,8);
+	
+	fill(0);
+ 	ellipse(630, 146, 20, 25);
+	fill(199,237,204);
+	arc(630, 146, 20, 25, PI, 0);
+	fill(255);
+	ellipse(630,147,6,8);
+
+	
+	
+	
+ 	pop();
+
+ //鼻子
+  noFill();
+  line(605,160,595,167);
+  line(595,167,605,170);
+
+//嘴巴
+ noFill();
+  arc(600, 175, 30, 30, QUARTER_PI, PI -  QUARTER_PI);
+}
+
+
+
+		
+function draw4(){
+
+  //头发
+  push();
+  fill(0);
+  noStroke();
+  ellipse(800,125,162,170);
+  pop();
+   
+	fill(0);
+  beginShape();
+//	vertex(880,132);
+ // vertex(720,132);
+  //vertex(520,190);
+ // vertex(880,190);
+  endShape();
+
+  //脸
+	push();
+ 	fill(255,250,205);
+ 	noStroke();
+ 	ellipse(800, 150, 105, 130);
+ 	pop();
+
+ 	//刘海
+  fill(0);
+  arc(750,60,120,130,QUARTER_PI/4,PI/4);
+  arc(850,60,120,130,PI*2/4,PI);
+
+	//眉毛
+	stroke(0);
+  noFill();   
+  arc(770,130,30,10,PI,0);
+  arc(830,130,30,10,PI,0);
+
+	//眼睛
+	push();
+// 	fill(0);
+// 	ellipse(770, 146, 20, 25);
+// 	ellipse(830, 146, 20, 25);
+	
+	fill(0);
+ 	ellipse(770, 146, 20, 25);
+	fill(199,237,204);
+	arc(770, 146, 20, 25, PI, 0);
+	fill(255);
+	ellipse(770,147,6,8);
+	
+	fill(0);
+ 	ellipse(830, 146, 20, 25);
+	fill(199,237,204);
+	arc(830, 146, 20, 25, PI, 0);
+	fill(255);
+	ellipse(830,147,6,8);
+
+
+ 	pop();
+
+ //鼻子
+  noFill();
+  line(805,160,795,167);
+  line(795,167,805,170);
+
+//嘴巴
+ noFill();
+  arc(800, 175, 30, 30, QUARTER_PI, PI -  QUARTER_PI);
+}
+
+
+
+
+ function draw() {
+ 
+  background(242,156,177);
+   draw1();
+	 changeeye();
+	 y++;
+	
+ 	 draw2();
+	 draw3();
+	 draw4();
+}
+ 
+ 
+
+
+function mousePressed(){ 
+
+ eyebool=true; 
+
+} 
+
+function mouseReleased(){ 
+
+ eyebool=false; 
+
+}
+
+
+					 
+</script>
+	 
+  <main>
+	
+	
+	
+	</main>
+</body>
+
+</html>
